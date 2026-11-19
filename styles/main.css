@@ -97,6 +97,26 @@ aside {
 	flex-basis: 25%;
 	padding-right: .5em;
 }
+/* CSS class */
+.featured {
+	border-top: 2px solid var(--accent-color);
+	border-bottom: 2px solid var(--accent-color);
+	padding: .5em 0 1em;
+}
+.speaker {
+	& h1 {
+		color: var(--accent-color);
+	}
+	& h2 {
+		color: black;
+	}
+	& p {
+		padding: .5em 0; 
+	}	
+}
+.large {
+	font-size: 125%;
+}
 
 /*navigation bar styles */
 .navbar {
@@ -159,7 +179,7 @@ aside {
 .menu > li:last-child a {
 	 margin-right: 0; 
 }
-	
+
 
 /* the styles for the footer */
 footer {
@@ -171,23 +191,3 @@ footer {
 	}
 }
 
-/* CSS class */
-.featured {
-	border-top: 2px solid var(--accent-color);
-	border-bottom: 2px solid var(--accent-color);
-	padding: .5em 0 1em;
-}
-.speaker {
-	& h1 {
-		color: var(--accent-color);
-	}
-	& h2 {
-		color: black;
-	}
-	& p {
-		padding: .5em 0; 
-	}	
-}
-.large {
-	font-size: 125%;
-}
