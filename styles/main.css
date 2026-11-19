@@ -1,7 +1,10 @@
 /* custom property */
 :root {
 	--accent-color: #800000;  /* could also be coded #800 */
-	--gradient-color: #f6bb73;
+	--gradient-color: #ac2409;
+	--light_menu: white;
+	--mid_menu: rgba(155, 34, 32, 0.723);
+	--dark_menu: black;
 }
 
 /* reset */
@@ -61,8 +64,7 @@ header {
 		float: left;
 		margin: .75em 1em;
 	}
-}
-
+	}
 /* the styles for the main content */
 main {
 	display: flex;
@@ -95,6 +97,69 @@ aside {
 	flex-basis: 25%;
 	padding-right: .5em;
 }
+
+/*navigation bar styles */
+.navbar {
+	clear: left;
+	background-color: var(--accent-color);
+	& a {
+		display: block;
+		padding: 1em 1em 1em 1em;
+		text-decoration: none;
+		margin: 0 1px 2px 1px;
+	}
+	& a:link, a:visited { 
+		color: var(--light_menu);
+	}
+	& a:hover, a:focus, a.current {
+		background-color: var(--mid_menu);
+		color: var(--dark_menu);
+	}
+	& ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 1px 2px 1px;
+	& li {
+		flex-basis: 20%;
+		text-align: center;
+	}
+}
+.submenu {
+	position: relative;
+	background-color: var(--accent-color);
+	& small { margin-left: .25em; }
+}
+.dropdown {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: var(--accent-color);
+	color: var(--light_menu);
+	display: none;
+
+	& > li a {
+		margin: 0 2px 2px;
+	}
+}
+
+.submenu:hover > .dropdown {
+	display: block;
+}
+
+.menu > li:first-child a {
+	 margin-left: 0; 
+}
+.menu > li:last-child a {
+	 margin-right: 0; 
+}
+	
 
 /* the styles for the footer */
 footer {
